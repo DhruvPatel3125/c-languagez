@@ -1,0 +1,42 @@
+// hybrid inheritance.cpp
+#include <iostream.h>
+#include<conio.h>
+
+class A
+{
+ 	public:
+ 	int x;
+};
+class B : public A
+{
+ 	public:
+ 	B()      //constructor to initialize x in base class A
+ 	{
+ 	   x = 10;
+ 	}
+};
+class C
+ {
+ 	public:
+ 	int y;
+ 	C()   //constructor to initialize y
+ 	{
+ 	    y = 4;
+        }
+};
+class D : public B, public C   //D is derived from class B and class C
+{
+ 	public:
+ 	void sum()
+ 	{
+ 	    cout << "Sum= " << x + y;
+ 	}
+};
+
+void main()
+{
+	clrscr();
+         D obj1;          //object of derived class D
+ 	obj1.sum();
+ 	getch();
+}               	//end of program
